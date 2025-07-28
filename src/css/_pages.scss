@@ -1,0 +1,85 @@
+@use "abstracts";
+
+//index page
+.container {
+    @include abstracts.grid(90%, 1);
+
+    a {
+        color: abstracts.$black;
+        margin-left: 2em;
+    }
+}
+
+.experience-item {
+    @include abstracts.textBox(90%, 1rem 1.5rem, 1rem auto, 0px 0px 8px 0px abstracts.$shadow, 1px solid abstracts.$shadow);
+    background-color: abstracts.$white;
+
+    p {
+        margin-bottom: 0.3rem;
+    }
+}
+
+.button-container {
+    margin: 1rem auto 0.5rem;
+    text-align: center;
+}
+
+.delete-button {
+    @include abstracts.button(abstracts.$header-color, abstracts.$light-text, 60%, 2.5rem, 0 auto, 100%, center, 1rem, false);
+}
+
+
+form {
+    margin: 1rem auto 2rem;
+    max-width: 90%;
+    padding-bottom: 1rem;
+
+
+    input[type="text"],
+    input[type="url"],
+    input[type="date"],
+    textarea,
+    select,
+    .submit-btn {
+        height: 2rem;
+        padding: 1rem;
+        margin: 0.5rem auto 1rem;
+        border: 1px solid abstracts.$shadow;
+    }
+
+    select:hover {
+        cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    textarea {
+        width: 100%;
+    }
+
+    textarea {
+        height: 8rem;
+    }
+
+    select {
+        margin-left: 0;
+    }
+
+    label {
+        text-align: left;
+    }
+
+
+    .btn-row {
+        text-align: center;
+    }
+
+    .submit-btn {
+        @include abstracts.button(abstracts.$header-color, abstracts.$light-text, 70%, 3rem, 0 auto, 100%, center, 1rem, false);
+    }
+}
+
+.about {
+    @include abstracts.textBox(90%, 1rem 1.5rem, 1rem auto, 0px 0px 8px 0px abstracts.$shadow, 1px solid abstracts.$shadow);
+    background-color: abstracts.$white;
+}
