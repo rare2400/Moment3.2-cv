@@ -1,0 +1,63 @@
+/* variables */
+/* colors */
+$header-color: #2F4156;
+$background-color: #F5EFEB;
+$black: #000;
+$white: #fff;
+$light-text: #f1edea;
+$shadow: rgba(0, 0, 0, 0.3);
+
+/* fonts */
+$font-stack: 'Arial', sans-serif;
+
+/* placeholder */
+%hoverLink {
+    color: $light-text;
+    text-decoration: underline;
+}
+
+/* mixins */
+//mixin för grid
+@mixin grid ($height, $columns: 2) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    height: $height;
+}
+
+//mixin för textbox
+@mixin textBox($width, $padding, $margin, $box-shadow: 0, $border: 0) {
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+    box-shadow: $box-shadow;
+
+    @if $border !=0 {
+        border: $border;
+    }
+
+    @if $box-shadow !=0 {
+        box-shadow: $box-shadow;
+    }
+}
+
+//mixin för knappar
+@mixin button($bg-color, $text-color, $witdth, $height, $margin, $max-w, $textalign, $fontsize, $border: false) {
+    @if $border == false {
+        background-color: $bg-color;
+        color: $text-color;
+        border: none;
+
+        &:hover {
+            background-color: rgba(149, 182, 217, 0.576);
+            color: $black;
+        }
+    }
+
+    width: $witdth;
+    height: $height;
+    margin: $margin;
+    max-width: $max-w;
+    text-align: $textalign;
+    font-size: $fontsize;
+    cursor: pointer;
+}
