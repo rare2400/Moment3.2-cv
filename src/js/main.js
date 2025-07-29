@@ -111,14 +111,28 @@ async function deleteExperience(_id) {
             throw new Error("Error deleting experience: " + response.statusText);
         }
 
-        const deleted = document.getElementById("delete-message");
-        const message = document.createElement("p");
-        message.textContent = "Erfarenheten har tagits bort.";
-        deleted.appendChild(message);
-
+        showMessage("Erfarenheten har tagits bort.");
+        
         //hämtar uppdaterad data från webbtjänsten
         getData();
     } catch (error) {
         console.error("Error:", error);
     }
+}
+
+function showMessage(text, duration = 3000) {
+    const messageContainer = document.getElementById("delete-message");
+    const messageText = document.getElementById("message-text");
+    const closeBtn = document.getElementById("close-message");
+
+    messageText.textContent = text;
+    messageContainer.classList.remove("hidden");
+
+    closeBtn.onclick = () => {
+        messageContainer.classList.add("hidden");
+    };
+
+    setTimeout(() => {
+        messageContainer.classList.add("hidden");
+    }, duration);
 }
