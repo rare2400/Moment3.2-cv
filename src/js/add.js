@@ -6,7 +6,7 @@
 
 //hämtar formulärlement och ger api-urlen en variabel
 const form = document.getElementById("add-experience");
-const url = "http://localhost:3000/api/workexperience";
+const url = "https://rare2400-cvapi.onrender.com/api/workexperience";
 
 //Eventlyssnare för formuläret vid tryck på "lägg till"
 form.addEventListener("submit", async (event) => {
@@ -40,10 +40,28 @@ form.addEventListener("submit", async (event) => {
 
         //omvandlar svaret till JSON-format
         const results = await response.json();
-        
+
         //loggar och skickar lyckat resultat till användaren
         console.log("Experience added successfully:", results);
-        
+
+        const added = document.getElementById("message");
+        added.innerHTML = "";
+
+        const text = document.createElement("p");
+        text.textContent = "Erfarenheten har lagts till.";
+
+        const link = document.createElement("a");
+        link.href = "index.html";
+        link.textContent = "Se ditt CV";
+
+        added.appendChild(text);
+        added.appendChild(link);
+
+        added.classList.add("visible");
+
+        setTimeout(() => {
+            added.classList.remove("visible");
+        }, 6000);
 
         //återställer formuläret
         form.reset();

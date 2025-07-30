@@ -25,21 +25,23 @@
     <div class="container" id="form-container">
         <main>
             <h2>Lägg till erfarenhet</h2>
-            <a href="index.html">Tillbaka</a>
+           <a href="index.html">Tillbaka</a>
+           <p class="warning"> * obligatoriskt fält</p>
+            <div id="message" class="add-message hidden"></div>
             <form method="post" id="add-experience">
-                <label for="companyName">Företagsnamn:</label>
+                <label for="companyName">* Företagsnamn:</label>
                 <br>
                 <input type="text" name="companyName" id="companyName" value="" required>
                 <br>
-                <label for="jobTitle">Jobbtitel:</label>
+                <label for="jobTitle">* Jobbtitel:</label>
                 <br>
                 <input type="text" name="jobTitle" id="jobTitle" value="" required>
                 <br>
-                <label for="location">Ort:</label>
+                <label for="location">* Ort:</label>
                 <br>
-                <input type="text" name="location" id="location" value="">
+                <input type="text" name="location" id="location" value="" required>
                 <br>
-                <label for="startDate">Startdatum:</label>
+                <label for="startDate">* Startdatum:</label>
                 <br>
                 <input type="date" name="startDate" id="startDate" value="" required>
                 <br>
