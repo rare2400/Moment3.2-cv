@@ -5,7 +5,7 @@
 "use strict";
 
 //hämtar url för webbtjänsten
-const url = "http://localhost:3000/api/workexperience";
+const url = "https://rare2400-cvapi.onrender.com/api/workexperience";
 
 //kör funktion för att hämta data
 getData();
