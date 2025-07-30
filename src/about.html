@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.scss">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Om uppgiften</title>
+</head>
+
+<body>
+    <header>
+        <div class="h-container">
+            <h1><a href="index.html">Moment 3</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="add.html">Lägg till erfarenhet</a></li>
+                    <li><a href="about.html">Om</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main class="about">
+            <h2>Moment 3</h2>
+            <p>I denna uppgift har en frontend-applikationen skapats för att skriva ut ett CV som placeras på startsidan
+                och vars innehåll hämtas ur en webbtjänst. Arbetserfarenheter kan adderas på sidan "lägg till"
+                (add.html) där de obligatoriska fälten ska fyllas i för att datan ska kunna skickas in i och hanteras av
+                databasen. När en eller flera arbetserfarenheter lagts till så står de utskrivna i listan på
+                startsidan med funktion att radera data genom att trycka på "ta bort", som raderar dokumentet ur
+                kollektionen och från listan på startsidan. När användaren raderar en arbetserfarenhet eller lägger till
+                en ny erfarenthet kommer tydliga meddelanden upp på skärmen som bekräftar att åtgärden lyckades.
+            </p>
+            <br>
+            <p> Webbtjänsten har skapats med hjälp av en NoSQL dokumentbaserad databas i MongoDB.
+                Tjänsten är utformad med Node.js, npm-paketet Express och mongoose som hanterar organiseringen av datan.
+                Data lagras enligt CRUD (Create, Read, Update, Delete) och stödjer därmed att lägga till, läsa ut,
+                uppdatera och radera innehåll. Dotenv används även i applikationen för att hantera miljövariabler som
+                ger tillgång till databasens URI och portnummer.
+            </p>
+            <br>
+            <p>Arbetet med uppgiften har varit mycket givande och man har fått mersmak för att använda NoSQL-databaser
+                när man skapar databaser och API:er. Eftersom uppgiften var likt utformad som i moment 2 så underlättade
+                det mycket vid utformningen av frontend-applikationen. Webbtjänsten var också enklare att börja med
+                utformningen, och man kom snabbt fram till att MongoDB var ett bra val av databas för att lagra data.
+                NoSQL-språket MongoDB använder är även enkelt att förstå och använda, vilket kändes underlättade när
+                koden utformades. För att ha med CRUD-operationerna i uppgiften var det simplare frågor som var
+                ihopsatta för att lägga till, hämta, ändra eller ta bort data ur databasen. Sammanfattningsvis har det
+                varit en intressant och lärorik uppgift som fått en att öppna upp ögonen för att använda sig av andra
+                typer av databaser än den traditionella relationsdatabasen. 
+            </p>
+        </main>
+    </div>
+    <footer>
+        <p>
+            Laborationsuppgift för kursen DT207G, <br> Backend-baserad webbutveckling <br>
+            Copyright &copy; 2025 Ramona Reinholdz
+        </p>
+    </footer>
+
+</body>
+
+</html>
