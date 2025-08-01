@@ -65,8 +65,7 @@ form#add-experience {
     padding-bottom: 1rem;
 
 
-    input[type="text"],
-    input[type="url"],
+    .input-text,
     input[type="date"],
     textarea,
     select,
@@ -81,8 +80,7 @@ form#add-experience {
         cursor: pointer;
     }
 
-    input[type="text"],
-    input[type="url"],
+    .input-text,
     textarea {
         width: 100%;
     }
